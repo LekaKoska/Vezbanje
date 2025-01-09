@@ -10,6 +10,9 @@ Route::post("/add-grade", [\App\Http\Controllers\OceneController::class, "dodajO
 
 Route::get("/admin/all-products", [\App\Http\Controllers\ProductsController::class, "index"]);
 
-Route::get("/admin/delete-product/{products}", [\App\Http\Controllers\ProductsController::class, "delete"]);
+Route::get("/admin/delete-product/{products}", [\App\Http\Controllers\ProductsController::class, "delete"])
+    ->name("deleteProduct");
 
 Route::get("/admin/all-contacts", [\App\Http\Controllers\ContactController::class, "allContacts"]);
+
+Route::get("/admin/delete-contact/{contacts}", [\App\Http\Controllers\ContactController::class, "delete"])->name("deleteContact");

@@ -14,7 +14,7 @@
 
             <th scope="col">Ime</th>
             <th scope="col">Sifra</th>
-           
+
         </tr>
         </thead>
         <tbody>
@@ -25,7 +25,7 @@
                 <td>{{$singleContact->sifra}}</td>
 
                 <td>
-                    <a class="btn btn-danger">Obrisi</a>
+                    <a href="/admin/delete-contact/{{$singleContact->id}}" class="btn btn-danger">Obrisi</a>
                     <a class="btn btn-primary">Izmeni</a>
                 </td>
             </tr>

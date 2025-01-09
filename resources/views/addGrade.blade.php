@@ -10,12 +10,12 @@
 @section("sadrzajStranice")
 <form action="/add-grade" method="POST">
     @if($errors->any())
-        <p>{{$errors->first()}}</p>
+        <p class="text-danger">{{$errors->first()}}</p>
     @endif
     {{csrf_field()}}
-    <input type="text" name="predmet" placeholder="Upisi predmet">
-    <input type="number" name="ocena" placeholder="Upisi ocenu">
-    <input type="text" name="profesor" placeholder="Upisi ime profesora">
+    <input type="text" name="predmet" placeholder="Upisi predmet" value="{{old("predmet")}}">
+    <input type="number" name="ocena" placeholder="Upisi ocenu" value="{{old("ocena")}}">
+    <input type="text" name="profesor" placeholder="Upisi ime profesora" value="{{old("profesor")}}">
     <button>Dodaj</button>
 </form>
 @endsection

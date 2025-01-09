@@ -16,7 +16,7 @@ class OceneController extends Controller
     public function dodajOcenu(Request $request)
     {
         $request->validate([
-            "predmet" => "required|string",
+            "predmet" => "required|string|unique:ocene",
             "ocena" => "required|integer|min:1|max:5",
             "profesor" => "required|string"
         ]);
